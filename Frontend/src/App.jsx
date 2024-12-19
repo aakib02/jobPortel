@@ -4,6 +4,7 @@ import RegisterForm from './Common/Register'
 import Login from './Common/Login'
 import Navbar from './Common/Navbar'
 import Footer from './Common/Footer'
+import HeroSection from './JobSeeker/HeroSection'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
        <Routes>
         <Route path='/reg' element={<RegisterForm/>}></Route>
         <Route path='/' element={<Login/>}></Route>
+        <Route path='/hero' element={<HeroSection/>}></Route>
        </Routes>
        <Footer/>
     </>
