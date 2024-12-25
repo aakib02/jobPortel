@@ -1,16 +1,19 @@
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
-Name:{
+name:{
     type:String
 },
-Email:{
+email:{
     type:String
 },
-Password:{
+password:{
     type:String
 },
-Role:{
+
+
+
+role:{
     type:String,
     enum:['jobseeker','recruiter','admin'],
     default:'jobseeker'
@@ -31,7 +34,7 @@ jobseeker:{
         company:{
             type:String
         },
-        role:{
+        jobRole:{
             type:String
         },
         duration:{

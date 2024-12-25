@@ -6,16 +6,20 @@ import cors from 'cors'
 dotenv.config()
 import router from "./Routes/routes.js";
 const app = express()
-
- dbConnect()
-
-
-
-
-app.use(cors())
 app.use(express.json())
-app.use('/api',router)
+app.use(express.urlencoded({ extended: true })); // Parses URL-encoded data
+app.use(cors())
 
-app.listen(process.env.PORT,()=>{
+
+
+dbConnect()
+
+
+
+
+
+app.use('/api', router)
+
+app.listen(process.env.PORT, () => {
     console.log(chalk.yellowBright(`your server is running on ${process.env.PORT}`));
 })
